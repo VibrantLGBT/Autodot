@@ -7,9 +7,9 @@
     <Nullable>enable</Nullable>
     <Configurations>Debug;Release;Linux</Configurations>
   </PropertyGroup>
-
+  
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'" />
-
+  
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Linux|AnyCPU'" />
 
 </Project>

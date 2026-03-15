@@ -4,9 +4,9 @@
   "RemoteZipUriLinux": "https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_mono_linux_x86_64.zip",
   "DeploymentFolder": ".autodot",
   "BinaryPath": "Godot_v4.6.1-stable_mono_win64/Godot_v4.6.1-stable_mono_win64.exe",
-  "BinaryPathLinux": "Godot_v4.6.1-stable_mono_linux_x64_64/Godot_v4.6.1-stable_mono_linux.x86_64",
+  "BinaryPathLinux": "Godot_v4.6.1-stable_mono_linux_x86_64/Godot_v4.6.1-stable_mono_linux.x86_64",
   "DefaultTask": "open",
-  "ProjectFolder": "./",
+  "ProjectFolder": "./gdproject",
   "Tasks": {
     "open": "{bp} {patharg} -e"
   }
