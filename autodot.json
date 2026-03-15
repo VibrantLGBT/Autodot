@@ -1,10 +1,12 @@
 ﻿{
   "AutodotVersion": "1.0",
-  "RemoteZipUri": "https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_mono_win64.zip",
+  "RemoteZipUri": "https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_mono_win64.zip",
+  "RemoteZipUriLinux": "https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_mono_linux_x86_64.zip",
   "DeploymentFolder": ".autodot",
-  "BinaryPath": "Godot_v4.4.1-stable_mono_win64/Godot_v4.4.1-stable_mono_win64.exe",
+  "BinaryPath": "Godot_v4.6.1-stable_mono_win64/Godot_v4.6.1-stable_mono_win64.exe",
+  "BinaryPathLinux": "Godot_v4.6.1-stable_mono_linux_x86_64/Godot_v4.6.1-stable_mono_linux.x86_64",
   "DefaultTask": "open",
-  "ProjectFolder": "./",
+  "ProjectFolder": "./gdproject",
   "Tasks": {
     "open": "{bp} {patharg} -e"
   }
