@@ -2,7 +2,7 @@
 
 public static class MessageBox
 {
-#if LINUX
+#if !LINUX
     [DllImport("user32.dll")]
     private static extern int MessageBoxA(IntPtr hWnd, string lpText, string lpCaption, uint uType);
 #else
