@@ -65,12 +65,21 @@ public class Autodot
                 }
 
                 Directory.CreateDirectory(config.DeploymentFolder);
-                string binaryPath = Path.Combine(config.DeploymentFolder, config.BinaryPath);
+                string bp = config.BinaryPath;
+#if LINUX
+                if (!string.IsNullOrWhiteSpace(config.BinaryPathLinux)) bp = config.BinaryPathLinux;
+#endif
+                string binaryPath = Path.Combine(config.DeploymentFolder, bp);
                 if (!File.Exists(binaryPath))
                 {
                     //download!
-                    Console.WriteLine("Downloading remote file: " + config.RemoteZipUri);
-                    MemoryStream download = await DownloadFile(config.RemoteZipUri);
+                    string downloaduri = config.RemoteZipUri;
+#if LINUX
+                    if (!string.IsNullOrWhiteSpace(config.RemoteZipUriLinux)) downloaduri = config.RemoteZipUriLinux;
+#endif
+
+                    Console.WriteLine("Downloading remote file: " + downloaduri);
+                    MemoryStream download = await DownloadFile(downloaduri);
                     //unzip!
                     using (var archive = new System.IO.Compression.ZipArchive(download, System.IO.Compression.ZipArchiveMode.Read))
                     {

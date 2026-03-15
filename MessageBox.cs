@@ -2,8 +2,15 @@
 
 public static class MessageBox
 {
+#if LINUX
     [DllImport("user32.dll")]
     private static extern int MessageBoxA(IntPtr hWnd, string lpText, string lpCaption, uint uType);
+#else
+    private static int MessageBoxA(IntPtr hWnd, string lpText, string lpCaption, uint uType)
+    {
+        return (int)MessageBoxResult.Ok;
+    }
+#endif
 
     public static MessageBoxResult Show(string text) => (MessageBoxResult)MessageBoxA(IntPtr.Zero, text, "\0", (uint)MessageBoxButtons.Ok);
 
